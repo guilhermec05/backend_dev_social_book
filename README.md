@@ -34,6 +34,7 @@ pode ser que não consiga usar a api logo na execução do docker, se isto acont
 ```
 - execute aplicação
 ```bash
+  go mod tidy
   go run main.go
 ```
 
