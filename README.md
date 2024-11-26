@@ -14,7 +14,7 @@ Possuir docker e docker compose instalado em sua máquina
 
 # Instalação
 
-comando de docker para inicializar, acesse a pasta /.docker.
+comando de docker para inicializar, acesse a pasta /.docker, execute os comandos abaixo.
 
 ```bash
   docker-compose up --build
