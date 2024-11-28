@@ -14,7 +14,7 @@ Possuir docker e docker compose instalado em sua máquina
 
 # Instalação
 
-comando de docker para inicializar, acesse a pasta /.docker.
+comando de docker para inicializar, acesse a pasta /build
 
 ```bash
   docker-compose up --build
@@ -35,7 +35,7 @@ pode ser que não consiga usar a api logo na execução do docker, se isto acont
 - execute aplicação
 ```bash
   go mod tidy
-  go run main.go
+  go run cmd/dev_book_backend/main.go
 ```
 
 
