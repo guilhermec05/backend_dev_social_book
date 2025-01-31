@@ -5,8 +5,6 @@ import (
 	"log"
 	"os"
 	"strconv"
-
-	"github.com/joho/godotenv"
 )
 
 var (
@@ -16,10 +14,6 @@ var (
 )
 
 func LoadConfig() {
-	err := godotenv.Load("./configs/.env")
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
 
 	dbUser := os.Getenv("DB_USER")
 	dbPass := os.Getenv("DB_PASS")
