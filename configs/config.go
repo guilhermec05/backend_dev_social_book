@@ -5,15 +5,22 @@ import (
 	"log"
 	"os"
 	"strconv"
+
+	"github.com/joho/godotenv"
 )
 
 var (
 	Connection = ""
-	Port       = 0
+	PORT       = 0
 	Jwt_token  = ""
 )
 
 func LoadConfig() {
+	err := godotenv.Load("./configs/.env")
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	dbUser := os.Getenv("DB_USER")
 	dbPass := os.Getenv("DB_PASS")
 	dbName := os.Getenv("DB_NAME")
@@ -28,5 +35,5 @@ func LoadConfig() {
 		log.Fatal("You are var PORT_APP")
 	}
 
-	Port = port
+	PORT = port
 }
